@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Restaurante — Registro</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900" rel="stylesheet" />
+  <link href="css/sb-admin-2.min.css" rel="stylesheet" />
+  <link href="css/custom.css" rel="stylesheet" />
+</head>
+<body class="bg-gradient-primary">
+  <div class="container">
+    <div class="card o-hidden border-0 shadow-lg my-5">
+      <div class="card-body p-0">
+        <div class="row">
+          <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
+          <div class="col-lg-7">
+            <div class="p-5">
+              <div class="text-center mb-4">
+                <h1 class="h4 text-gray-900">Crear una cuenta</h1>
+                <p class="text-muted small">Completa los datos para registrarte</p>
+              </div>
+              <div id="alertaError" class="alert alert-danger d-none" role="alert">
+                <i class="fas fa-exclamation-circle mr-2"></i>
+                <span id="mensajeError"></span>
+              </div>
+              <div id="alertaExito" class="alert alert-success d-none" role="alert">
+                <i class="fas fa-check-circle mr-2"></i>
+                <span id="mensajeExito"></span>
+              </div>
+              <form id="formularioRegistro" class="user">
+                <div class="form-group">
+                  <select id="selectRol" class="form-control form-control-user" required>
+                    <option value="">— Seleccionar rol —</option>
+                    <option value="administrador">Administrador</option>
+                    <option value="vendedor">Vendedor</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <input type="text" id="inputUsuario" class="form-control form-control-user"
+                    placeholder="Nombre de usuario" required />
+                </div>
+                <div class="form-group row">
+                  <div class="col-sm-6 mb-3 mb-sm-0">
+                    <input type="password" id="inputContrasena" class="form-control form-control-user"
+                      placeholder="Contraseña" required />
+                  </div>
+                  <div class="col-sm-6">
+                    <input type="password" id="inputConfirmarContrasena" class="form-control form-control-user"
+                      placeholder="Confirmar contraseña" required />
+                  </div>
+                </div>
+                <button id="btnRegistrar" type="submit" class="btn btn-primary btn-user btn-block">
+                  <span id="textoBtn"><i class="fas fa-user-plus mr-2"></i>Registrarse</span>
+                  <span id="loadingBtn" class="d-none"><i class="fas fa-spinner fa-spin mr-2"></i>Registrando...</span>
+                </button>
+              </form>
+              <hr />
+              <div class="text-center">
+                <a class="small" href="login.html">¿Ya tienes cuenta? <strong>Inicia sesión</strong></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+  <script src="js/sb-admin-2.min.js"></script>
+  <script src="js/apiService.js"></script>
+  <script src="js/sessionService.js"></script>
+  <script src="js/register.js"></script>
+</body>
+</html>
