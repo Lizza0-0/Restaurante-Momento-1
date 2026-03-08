@@ -9,3 +9,5 @@ const _elNombreUsuario = document.getElementById('nombre-usuario');
 if (_elNombreUsuario && _usuarioLocal) {
     _elNombreUsuario.textContent = _usuarioLocal.usuario ?? 'Usuario';
 }
+
+// Marca de version para el commit de entrega del dashboard.
